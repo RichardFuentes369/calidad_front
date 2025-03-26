@@ -49,7 +49,6 @@ export function createTranslateLoader(http: HttpClient) {
 
       // inicio modulos
       { baseTranslateUrl, moduleName: 'module/basico', namespace: 'pages-basico'},
-      { baseTranslateUrl, moduleName: 'module/publicaciones', namespace: 'pages-publicaciones'},
       { baseTranslateUrl, moduleName: 'module/usuarios', namespace: 'pages-usuarios'},
       { baseTranslateUrl, moduleName: 'module/modulos', namespace: 'pages-modulos'},
       { baseTranslateUrl, moduleName: 'module/mantenimiento', namespace: 'pages-mantenimiento'},
