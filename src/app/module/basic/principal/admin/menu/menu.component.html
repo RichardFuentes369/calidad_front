@@ -21,7 +21,37 @@
       </div>
     }
 
-    @if(tienePermiso('publicaciones')){
+    @if(tienePermiso('mantenimiento')){
+      <div class="item" (click)="goTo('/index-mantenimiento')" style="cursor: pointer;">
+        <div class="card">
+          <div class="card-body text-center p-0 pb-3 pt-3">
+            <img src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/256/add-1-icon.png" width="80px">
+          </div>
+          <div class="card-footer text-center bg-white">
+            <span>
+              {{ 'pages-basico.Menu.WordMaintenance' | translate}}
+            </span>
+          </div>
+        </div>
+      </div>
+    }
+
+    @if(tienePermiso('zona_comun')){
+      <div class="item" (click)="goTo('/index-zona-comun')" style="cursor: pointer;">
+        <div class="card">
+          <div class="card-body text-center p-0 pb-3 pt-3">
+            <img src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/256/add-1-icon.png" width="80px">
+          </div>
+          <div class="card-footer text-center bg-white">
+            <span>
+              {{ 'pages-basico.Menu.WordSocialArea' | translate}}
+            </span>
+          </div>
+        </div>
+      </div>
+    }
+
+    @if(tienePermiso('proveedor')){
       <div class="item" (click)="goTo('/index-publicaciones')" style="cursor: pointer;">
         <div class="card">
           <div class="card-body text-center p-0 pb-3 pt-3">
@@ -29,7 +59,7 @@
           </div>
           <div class="card-footer text-center bg-white">
             <span>
-              {{ 'pages-basico.Menu.WordPublications' | translate}}
+              {{ 'pages-basico.Menu.WordSupplier' | translate}}
             </span>
           </div>
         </div>

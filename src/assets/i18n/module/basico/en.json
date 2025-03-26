@@ -7,7 +7,9 @@
   "Menu": {
     "WordMenu": "Menu",
     "WordUsers": "Users",
-    "WordPublications": "Publications",
+    "WordMaintenance": "Maintenance",
+    "WordSocialArea": "Social area",
+    "WordSupplier": "Supplier",
     "WordModule": "Modules"
   }
 }
