@@ -99,69 +99,69 @@ export class IndexComponent implements OnInit{
   componentePrecargado = ""
 
   crearData (_id: string){
-    // localStorage.setItem('profile', 'admin')
-    // this.tamano = "xl"
-    // this.scrollable = false
-    // this.title = "Crear administrador"
-    // this.save = true
-    // this.buttonSave = "Guardar"
-    // this.edit = false
-    // this.buttonEdit = "Editar"
-    // this.cancel = true
-    // this.buttonCancel = "Cancelar"
-    // this.cierreModal = "true"
-    // this.componentePrecargado = "CrearUsuariosComponent"
+    localStorage.setItem('profile', 'admin')
+    this.tamano = "xl"
+    this.scrollable = false
+    this.title = "Crear proveedor"
+    this.save = true
+    this.buttonSave = "Guardar"
+    this.edit = false
+    this.buttonEdit = "Editar"
+    this.cancel = true
+    this.buttonCancel = "Cancelar"
+    this.cierreModal = "true"
+    this.componentePrecargado = "CrearProveedorComponent"
 
-    // const idButton = document.getElementById('miBoton')
-    // if(idButton){
-    //   idButton.setAttribute('componente', this.componentePrecargado);
-    //   idButton.click()
-    // }
+    const idButton = document.getElementById('miBoton')
+    if(idButton){
+      idButton.setAttribute('componente', this.componentePrecargado);
+      idButton.click()
+    }
   }
 
   verData (_id: string){
-    // this.tamano = "xl"
-    // this.scrollable = false
-    // this.title = "Ver administrador"
-    // this.save = false
-    // this.buttonSave = "Guardar"
-    // this.edit = false
-    // this.buttonEdit = "Editar"
-    // this.cancel = true
-    // this.buttonCancel = "Cancelar"
-    // this.cierreModal = "true"
-    // this.componentePrecargado = "VerUsuariosComponent"
+    this.tamano = "xl"
+    this.scrollable = false
+    this.title = "Ver proveedor"
+    this.save = false
+    this.buttonSave = "Guardar"
+    this.edit = false
+    this.buttonEdit = "Editar"
+    this.cancel = true
+    this.buttonCancel = "Cancelar"
+    this.cierreModal = "true"
+    this.componentePrecargado = "VerProveedorComponent"
 
-    // const idButton = document.getElementById('miBoton')
-    // if(idButton){
-    //   this.router.navigate([], {
-    //     queryParams: { rol: 'user', id: _id },
-    //   });
-    //   idButton.setAttribute('componente', this.componentePrecargado);
-    //   idButton.click()
-    // }
+    const idButton = document.getElementById('miBoton')
+    if(idButton){
+      this.router.navigate([], {
+        queryParams: { id: _id },
+      });
+      idButton.setAttribute('componente', this.componentePrecargado);
+      idButton.click()
+    }
   }
 
   editarData (_id: string){
-    // this.tamano = "xl"
-    // this.scrollable = false
-    // this.title = "Editar administrador"
-    // this.save = false
-    // this.buttonSave = "Guardar"
-    // this.edit = false
-    // this.buttonEdit = "Editar"
-    // this.cancel = true
-    // this.buttonCancel = "Cancelar"
-    // this.componentePrecargado = "EditarUsuariosComponent"
+    this.tamano = "xl"
+    this.scrollable = false
+    this.title = "Editar proveedor"
+    this.save = false
+    this.buttonSave = "Guardar"
+    this.edit = false
+    this.buttonEdit = "Editar"
+    this.cancel = true
+    this.buttonCancel = "Cancelar"
+    this.componentePrecargado = "EditarProveedorComponent"
 
-    // const idButton = document.getElementById('miBoton')
-    // if(idButton){
-    //   this.router.navigate([], {
-    //     queryParams: { rol: 'user', id: _id },
-    //   });
-    //   idButton.setAttribute('componente', this.componentePrecargado);
-    //   idButton.click()
-    // }
+    const idButton = document.getElementById('miBoton')
+    if(idButton){
+      this.router.navigate([], {
+        queryParams: { id: _id },
+      });
+      idButton.setAttribute('componente', this.componentePrecargado);
+      idButton.click()
+    }
   }
 
   @ViewChild(TablecrudComponent)

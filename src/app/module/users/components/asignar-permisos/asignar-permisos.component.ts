@@ -30,6 +30,13 @@ export class AsignarPermisosComponent implements OnInit{
 
   permisos: any[] = []
 
+  sinModulo: any[] = [
+    'modulos',
+    'mantenimiento',
+    'zona_comun',
+    'proveedor'
+  ]
+
   async ngOnInit() {
     await this.userService.refreshToken('authadmin');
     const userData = await this.userService.getUser('authadmin');
