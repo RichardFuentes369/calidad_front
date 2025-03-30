@@ -1,15 +1,16 @@
 <div class="">
   <h1>{{ 'pages-proveedor.Title.Module' | translate}}</h1>
 
-  <!-- <app-globales-tablecrud
-    [campoFiltro] = showcampoFiltro
-    [endPoint] = endPoint
+  <app-globales-tablecrud
+    [campoFiltro] = "true"
+    [endPoint] = "'proveedor'"
     [columnas] = columnas
     [permisosAcciones] = permisos
 
     (verItem) = "verData($event)"
     (crearNuevoItem) = "crearData($event)"
+    (editarItem) = "editarData($event)"
     (eliminarItem) = "eliminarData($event)"
   >
-  </app-globales-tablecrud> -->
+  </app-globales-tablecrud>
 </div>

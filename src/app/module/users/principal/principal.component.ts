@@ -1,17 +1,19 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-
-import Swal from 'sweetalert2'
-import { Router } from '@angular/router';
+import { PipesModule } from '@pipe/pipes.module';
 import { AuthService } from '@guard/service/auth.service';
 import { PermisosService } from '@service/globales/permisos/permisos.service';
-import { LoadingComponent } from '@component/globales/loading/loading.component';
-import { TablecrudComponent } from '@component/globales/tablecrud/tablecrud.component';
-import { PrincipalService } from './service/principal.service';
 
-import { Permisos } from '@functions/System'
+import Swal from 'sweetalert2'
+
+import { TablecrudComponent } from '@component/globales/tablecrud/tablecrud.component';
 import { ModalBoostrapComponent } from '@component/globales/modal/boostrap/boostrap.component';
+import { LoadingComponent } from '@component/globales/loading/loading.component';
+
+import { PrincipalService } from './service/principal.service';
 
 @Component({
   selector: 'app-principal',
