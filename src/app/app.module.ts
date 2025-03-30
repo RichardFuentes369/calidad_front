@@ -25,12 +25,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { RouterModule } from '@angular/router';
-import { CrearProveedorComponent } from './module/proveedor/components/crear-proveedor/crear-proveedor.component';
-import { EditarProveedorComponent } from './module/proveedor/components/editar-proveedor/editar-proveedor.component';
-import { VerProveedorComponent } from './module/proveedor/components/ver-proveedor/ver-proveedor.component';
-import { CrearZonaComponent } from './module/zonaComun/components/crear-zona/crear-zona.component';
-import { EditarZonaComponent } from './module/zonaComun/components/editar-zona/editar-zona.component';
-import { VerZonaComponent } from './module/zonaComun/components/ver-zona/ver-zona.component';
 
 export function createTranslateLoader(http: HttpClient) {
   const baseTranslateUrl = './assets/i18n';
@@ -69,12 +63,6 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    CrearProveedorComponent,
-    EditarProveedorComponent,
-    VerProveedorComponent,
-    CrearZonaComponent,
-    EditarZonaComponent,
-    VerZonaComponent,
   ],
   imports: [
     BrowserModule,

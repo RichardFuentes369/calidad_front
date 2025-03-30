@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ver-proveedor',
+  standalone: true,
   templateUrl: './ver-proveedor.component.html',
   styleUrl: './ver-proveedor.component.scss'
 })

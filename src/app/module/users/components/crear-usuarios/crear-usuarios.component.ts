@@ -8,7 +8,6 @@ import Swal from 'sweetalert2'
 import { PrincipalService } from '../../principal/service/principal.service';
 import { Router } from '@angular/router';
 import { ocultarModalOscura } from '@functions/System'
-import { TablecrudComponent } from '@component/globales/tablecrud/tablecrud.component';
 import { FinalService } from '@module/users/finales/service/final.service';
 
 interface crearUsuario {
