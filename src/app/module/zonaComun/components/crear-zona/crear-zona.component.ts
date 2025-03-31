@@ -43,35 +43,26 @@ export class CrearZonaComponent {
 
   async crearZonaSocial(){
 
-    // let complemento = localStorage.getItem('profile')
-    // let endPoint
-
-    // if(complemento == 'admin'){
-    //   endPoint = this.principalService
-    // }else{
-    //   endPoint = this.finalService
-    // }
-
-    // await endPoint.createUser(this.model)
-    // .then(response=>{
-    //   ocultarModalOscura()
-    //   this.translate.get('pages-usuarios.Swal.TitleAreYouSure').subscribe((translatedTitle: string) => {
-    //     localStorage.removeItem('profile')
-    //     Swal.fire({
-    //       title: this.translate.instant('pages-usuarios.Swal.TitleCreate'),
-    //       text: this.translate.instant('pages-usuarios.Swal.TitleRegisterCreate'),
-    //       icon: "success"
-    //     });
-    //   });
-    // }).catch(err =>{
-    //   console.log(err)
-    //   Swal.fire({
-    //     title: err.response.data.message,
-    //     text: err.response.data.error,
-    //     icon: 'error',
-    //     confirmButtonText: 'Cool'
-    //   })
-    // })
+    await this.zonaComunService.createZona(this.model)
+    .then(response=>{
+      ocultarModalOscura()
+      this.translate.get('pages-zonaComun.Swal.TitleAreYouSure').subscribe((translatedTitle: string) => {
+        localStorage.removeItem('profile')
+        Swal.fire({
+          title: this.translate.instant('pages-zonaComun.Swal.TitleCreate'),
+          text: this.translate.instant('pages-zonaComun.Swal.TitleRegisterCreate'),
+          icon: "success"
+        });
+      });
+    }).catch(err =>{
+      console.log(err)
+      Swal.fire({
+        title: err.response.data.message,
+        text: err.response.data.error,
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      })
+    })
 
   }
 

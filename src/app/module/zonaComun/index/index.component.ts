@@ -161,22 +161,22 @@ export class IndexComponent implements OnInit{
   someInput!: TablecrudComponent
   eliminarData (_id: string){
     console.log("eliminarData "+_id)
-    this.translate.get('pages-usuarios.Swal.TitleAreYouSure').subscribe((translatedTitle: string) => {
+    this.translate.get('pages-zonaComun.Swal.TitleAreYouSure').subscribe((translatedTitle: string) => {
       Swal.fire({
         title: translatedTitle,
-        text: this.translate.instant('pages-usuarios.Swal.TitleWarnigRevert'),
+        text: this.translate.instant('pages-zonaComun.Swal.TitleWarnigRevert'),
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: this.translate.instant('pages-usuarios.Swal.TitleDelete'),
-        cancelButtonText: this.translate.instant('pages-usuarios.Swal.TitleCancel')
+        confirmButtonText: this.translate.instant('pages-zonaComun.Swal.TitleDelete'),
+        cancelButtonText: this.translate.instant('pages-zonaComun.Swal.TitleCancel')
       }).then(async (result) => {
         if (result.isConfirmed) {
             if (result.isConfirmed) {
-              // await this.principalService.deleteUser(_id)
+              await this.zonaComunService.deleteZona(_id)
               await this.someInput.reload()
               Swal.fire({
-                title: this.translate.instant('pages-usuarios.Swal.TitleDelete'),
-                text: this.translate.instant('pages-usuarios.Swal.TitleRegisterDeleted'),
+                title: this.translate.instant('pages-zonaComun.Swal.TitleDelete'),
+                text: this.translate.instant('pages-zonaComun.Swal.TitleRegisterDeleted'),
                 icon: "success"
               });
             }

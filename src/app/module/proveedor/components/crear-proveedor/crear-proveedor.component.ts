@@ -6,14 +6,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ProveedorService } from '@module/proveedor/index/service/proveedor.service';
 import { Router } from '@angular/router';
 import { ocultarModalOscura } from '@functions/System'
-
-interface crearUsuario {
-  "razonSocial": string,
-  "telefono": string,
-  "email": string,
-  "estado": string,
-  "nit": string
-}
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-crear-proveedor',
@@ -50,35 +43,28 @@ export class CrearProveedorComponent {
 
   async crearProveedor(){
 
-    // let complemento = localStorage.getItem('profile')
-    // let endPoint
+    this.model.estado = (this.model.estado === 'true') ? 'activo':'inactivo' 
 
-    // if(complemento == 'admin'){
-    //   endPoint = this.principalService
-    // }else{
-    //   endPoint = this.finalService
-    // }
-
-    // await endPoint.createUser(this.model)
-    // .then(response=>{
-    //   ocultarModalOscura()
-    //   this.translate.get('pages-usuarios.Swal.TitleAreYouSure').subscribe((translatedTitle: string) => {
-    //     localStorage.removeItem('profile')
-    //     Swal.fire({
-    //       title: this.translate.instant('pages-usuarios.Swal.TitleCreate'),
-    //       text: this.translate.instant('pages-usuarios.Swal.TitleRegisterCreate'),
-    //       icon: "success"
-    //     });
-    //   });
-    // }).catch(err =>{
-    //   console.log(err)
-    //   Swal.fire({
-    //     title: err.response.data.message,
-    //     text: err.response.data.error,
-    //     icon: 'error',
-    //     confirmButtonText: 'Cool'
-    //   })
-    // })
+    await this.proveedorService.createSupplier(this.model)
+    .then(response=>{
+      ocultarModalOscura()
+      this.translate.get('pages-proveedor.Swal.TitleAreYouSure').subscribe((translatedTitle: string) => {
+        localStorage.removeItem('profile')
+        Swal.fire({
+          title: this.translate.instant('pages-proveedor.Swal.TitleCreate'),
+          text: this.translate.instant('pages-proveedor.Swal.TitleRegisterCreate'),
+          icon: "success"
+        });
+      });
+    }).catch(err =>{
+      console.log(err)
+      Swal.fire({
+        title: err.response.data.message,
+        text: err.response.data.error,
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      })
+    })
 
   }
 }

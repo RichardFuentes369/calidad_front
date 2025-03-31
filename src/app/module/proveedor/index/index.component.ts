@@ -179,7 +179,7 @@ export class IndexComponent implements OnInit{
       }).then(async (result) => {
         if (result.isConfirmed) {
             if (result.isConfirmed) {
-              // await this.principalService.deleteUser(_id)
+              await this.proveedorService.deleteSupplier(_id)
               await this.someInput.reload()
               Swal.fire({
                 title: this.translate.instant('pages-usuarios.Swal.TitleDelete'),

@@ -10,14 +10,6 @@ import { Router } from '@angular/router';
 import { ocultarModalOscura } from '@functions/System'
 import { FinalService } from '@module/users/finales/service/final.service';
 
-interface crearUsuario {
-  "firstName": string,
-  "lastName": string,
-  "password": string,
-  "email": string,
-  "isActive": string
-}
-
 @Component({
   selector: 'app-crear-usuarios',
   standalone: true,
