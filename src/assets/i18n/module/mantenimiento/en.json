@@ -1,5 +1,19 @@
 {
   "Title": {
     "Module":"Maintenances"
+  },
+  "Swal": {
+    "TitleAreYouSure": "Are you sure?",
+    "TitleWarningRevert": "You will not be able to revert this change!",
+    "TitleCreate": "Created",
+    "TitleCancel": "Cancel",
+    "TitleDelete": "Delete!",
+    "TitleRegisterUpdated": "Registration updated",
+    "TitleRegisterCreate": "Registration created",
+    "TitleRegisterDeleted": "Registration deleted",
+    "TitleRegisterInactived": "Registration disabled",
+    "TitleRegisterActived": "Registration enabled",
+    "TitleActived": "Activate",
+    "TitleInactived": "Inactivate"
   }
 }

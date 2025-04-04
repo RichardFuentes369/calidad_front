@@ -10,6 +10,11 @@ import { CrearProveedorComponent } from './proveedor/components/crear-proveedor/
 import { VerProveedorComponent } from './proveedor/components/ver-proveedor/ver-proveedor.component';
 import { EditarProveedorComponent } from './proveedor/components/editar-proveedor/editar-proveedor.component';
 
+import { CrearMantenimientoComponent } from './mantenimiento/components/crear-mantenimiento/crear-mantenimiento.component';
+import { EditarMantenimientoComponent } from './mantenimiento/components/editar-mantenimiento/editar-mantenimiento.component';
+import { VerMantenimientoComponent } from './mantenimiento/components/ver-mantenimiento/ver-mantenimiento.component';
+
+
 export class ListaComponentes {
 
   /*
@@ -56,6 +61,20 @@ export class ListaComponentes {
     {
       name: 'EditarProveedorComponent',
       componente: EditarProveedorComponent
+    },
+
+    // mantenimiento
+    {
+      name: 'CrearMantenimientoComponent',
+      componente: CrearMantenimientoComponent
+    },
+    {
+      name: 'EditarMantenimientoComponent',
+      componente: EditarMantenimientoComponent
+    },
+    {
+      name: 'VerMantenimientoComponent',
+      componente: VerMantenimientoComponent
     }
   ];
 

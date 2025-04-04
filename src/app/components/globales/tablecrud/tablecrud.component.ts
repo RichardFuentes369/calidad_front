@@ -176,6 +176,12 @@ export class TablecrudComponent implements OnInit {
     this.asignar.emit(this.idSeleccionado)
   }
 
+  @Output()
+  hitorical = new EventEmitter<string>()
+  hitoricalItem (){
+    this.hitorical.emit(this.idSeleccionado)
+  }
+
   selectionClear (){
     this.idSeleccionado = ''
     $('tr').css({'background-color':'','color':'black'});

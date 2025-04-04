@@ -1,5 +1,19 @@
 {
-    "Title": {
-        "Module":"Mantenimientos"
-    }
+  "Title": {
+      "Module":"Mantenimientos"
+  },
+  "Swal": {
+    "TitleAreYouSure": "Estas seguro?",
+    "TitleWarnigRevert": "No podras reviertir este cambio!",
+    "TitleCreate": "Creado",
+    "TitleCancel": "Cancelar",
+    "TitleDelete": "Eliminar!",
+    "TitleRegisterUpdated": "Registro actualizado",
+    "TitleRegisterCreate": "Registro creado",
+    "TitleRegisterDeleted": "Registro eliminado",
+    "TitleRegisterInactived": "Registro desactivado",
+    "TitleRegisterActived": "Registro activado",
+    "TitleActived": "Activar",
+    "TitleInactived": "Inactivar"
   }
+}

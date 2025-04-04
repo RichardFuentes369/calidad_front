@@ -33,6 +33,11 @@
         {{ 'global-tablecrud.Options.Switch' | translate}}
       </button>
     }
+    @if(tienePermiso('hitorico')){
+      <button class="btn btn-primary btn-sm mx-1" (click)="hitorical()" [disabled]="!idSeleccionado">
+        {{ 'global-tablecrud.Options.Historical' | translate}}
+      </button>
+    }
     <button class="btn btn-primary btn-sm mx-1" (click)="selectionClear()" [disabled]="!idSeleccionado">
       {{ 'global-tablecrud.Options.Clean' | translate}}
     </button>
