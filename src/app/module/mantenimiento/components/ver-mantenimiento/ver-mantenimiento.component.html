@@ -1,1 +1,46 @@
-<p>ver-mantenimiento works!</p>
+<div class="">
+  @for (item of mantenimiento; track item; let  i = $index) {
+      <div class="col-xl col-sm-12">
+        <label for="exampleInputEmail1">
+          {{ 'pages-mantenimiento.Label.descripcion' | translate}}
+        </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{item.descripcion}}" readonly>
+      </div>
+      <div class="col-xl col-sm-12">
+        <label for="exampleInputEmail1">
+          {{ 'pages-mantenimiento.Label.serial' | translate}}
+        </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{item.serial}}" readonly>
+      </div>
+      <div class="col-xl col-sm-12">
+        <label for="exampleInputEmail1">
+          {{ 'pages-mantenimiento.Label.maintenanceDate' | translate}}
+        </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{item.fecha_mantenimiento}}" readonly>
+      </div>
+      <div class="col-xl col-sm-12">
+        <label for="exampleInputEmail1">
+          {{ 'pages-mantenimiento.Label.estado' | translate}}
+        </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{item.estado}}" readonly>
+      </div>
+      <div class="col-xl col-sm-12">
+        <label for="exampleInputEmail1">
+          {{ 'pages-mantenimiento.Label.crateDate' | translate}}
+        </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{item.fecha_creacion}}" readonly>
+      </div>
+      <div class="col-xl col-sm-12">
+        <label for="exampleInputEmail1">
+          {{ 'pages-mantenimiento.Label.updateDate' | translate}}
+        </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{item.fecha_actualizacion}}" readonly>
+      </div>
+      <div class="col-xl col-sm-12">
+        <label for="exampleInputEmail1">
+          {{ 'pages-mantenimiento.Label.price' | translate}}
+        </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{item.precio}}" readonly>
+      </div>
+  }
+</div>

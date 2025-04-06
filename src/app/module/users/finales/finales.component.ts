@@ -88,7 +88,7 @@ export class FinalesComponent implements OnInit{
     localStorage.setItem('profile', 'user')
     this.tamano = "xl"
     this.scrollable = false
-    this.title = "Crear usuarios"
+    this.title = this.translate.instant('pages-usuarios.Title.CreateUserFinalWord')
     this.save = true
     this.buttonSave = "Guardar"
     this.edit = false
@@ -108,7 +108,7 @@ export class FinalesComponent implements OnInit{
   verData (_id: string){
     this.tamano = "xl"
     this.scrollable = false
-    this.title = "Ver usuarios"
+    this.title = this.translate.instant('pages-usuarios.Title.SeeUserFinalWord')
     this.save = false
     this.buttonSave = "Guardar"
     this.edit = false
@@ -131,7 +131,7 @@ export class FinalesComponent implements OnInit{
   editarData (_id: string){
     this.tamano = "xl"
     this.scrollable = false
-    this.title = "Editar usuarios"
+    this.title = this.translate.instant('pages-usuarios.Title.EditUserFinalWord')
     this.save = false
     this.buttonSave = "Guardar"
     this.edit = false

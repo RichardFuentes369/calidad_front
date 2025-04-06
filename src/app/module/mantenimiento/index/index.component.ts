@@ -59,6 +59,10 @@ export class IndexComponent {
         data: 'zona_id.nombre',
       },
       {
+        title: '# Registro',
+        data: 'serial',
+      },
+      {
         title: 'Description',
         data: 'descripcion',
       },
@@ -102,7 +106,7 @@ export class IndexComponent {
       localStorage.setItem('profile', 'admin')
       this.tamano = "xl"
       this.scrollable = false
-      this.title = "Crear orden"
+      this.title = this.translate.instant('pages-mantenimiento.Title.CreateMaintenanceWord')
       this.save = true
       this.buttonSave = "Guardar"
       this.edit = false
@@ -122,7 +126,7 @@ export class IndexComponent {
     verData (_id: string){
       this.tamano = "xl"
       this.scrollable = false
-      this.title = "Ver orden"
+      this.title = this.translate.instant('pages-mantenimiento.Title.SeeMaintenanceWord')
       this.save = false
       this.buttonSave = "Guardar"
       this.edit = false
@@ -145,7 +149,7 @@ export class IndexComponent {
     editarData (_id: string){
       this.tamano = "xl"
       this.scrollable = false
-      this.title = "Editar orden"
+      this.title = "Editar mantenimietno"
       this.save = false
       this.buttonSave = "Guardar"
       this.edit = false

@@ -102,7 +102,7 @@ export class IndexComponent implements OnInit{
     localStorage.setItem('profile', 'admin')
     this.tamano = "xl"
     this.scrollable = false
-    this.title = "Crear proveedor"
+    this.title = this.translate.instant('pages-proveedor.Title.CreateSupplierWord')
     this.save = true
     this.buttonSave = "Guardar"
     this.edit = false
@@ -122,7 +122,7 @@ export class IndexComponent implements OnInit{
   verData (_id: string){
     this.tamano = "xl"
     this.scrollable = false
-    this.title = "Ver proveedor"
+    this.title = this.translate.instant('pages-proveedor.Title.SeeSupplierWord')
     this.save = false
     this.buttonSave = "Guardar"
     this.edit = false
@@ -145,7 +145,7 @@ export class IndexComponent implements OnInit{
   editarData (_id: string){
     this.tamano = "xl"
     this.scrollable = false
-    this.title = "Editar proveedor"
+    this.title = this.translate.instant('pages-proveedor.Title.EditSupplierWord')
     this.save = false
     this.buttonSave = "Guardar"
     this.edit = false

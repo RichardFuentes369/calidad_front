@@ -26,7 +26,7 @@
           <select [(ngModel)]="model.zona_id" class="form-control">
             @for (zona of zona; track zona.id) {
               <option [ngValue]="zona.id">
-                {{ zona.nombre }}
+                {{ zona.nombre }} - {{ zona.descripcion }}
               </option>
             }
           </select>

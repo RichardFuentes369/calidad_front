@@ -1,6 +1,10 @@
 {
   "Title": {
-      "Module":"Mantenimientos"
+    "Module":"Mantenimientos",
+    "pageMaintenanceTitle":"Mantenimiento",
+    "CreateMaintenanceWord":"Crear Manetnimiento",
+    "EditMaintenanceWord":"Editar Manetnimiento",
+    "SeeMaintenanceWord":"Ver Manetnimiento"
   },
   "Swal": {
     "TitleAreYouSure": "Estas seguro?",
@@ -18,12 +22,22 @@
   },
   "Label":{
     "descripcion": "Descripción",
-    "maintenanceDate": "Fecha mantenimiento",
+    "serial": "Consecutivo",
+    "estado": "Estado",
+    "maintenanceDate": "Fecha mantenimeinto",
+    "crateDate": "Fecha creación",
+    "updateDate": "Fecha actualización",
+    "price": "Precio",
     "zona": "Zona"
   },
   "Placeholder": {
     "descripcion": "Descripción...",
+    "serial": "Consecutivo",
+    "estado": "EnEspera",
     "maintenanceDate": "2024-12-02",
+    "crateDate": "2024-12-02",
+    "updateDate": "2024-12-02",
+    "price": "150000",
     "zona": "Seleccione"
   },
   "Buttons": {

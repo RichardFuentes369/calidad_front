@@ -1,6 +1,10 @@
 {
   "Title": {
-    "Module":"Maintenances"
+    "Module":"Maintenance",
+    "pageMaintenanceTitle":"Maintenances",
+    "CreateMaintenanceWord":"Create Maintenance",
+    "EditMaintenanceWord":"Edit Maintenance",
+    "SeeMaintenanceWord":"See Maintenance"
   },
   "Swal": {
     "TitleAreYouSure": "Are you sure?",
@@ -18,12 +22,22 @@
   },
   "Label":{
     "descripcion": "Descripction",
+    "serial": "Serial",
+    "estado": "Status",
     "maintenanceDate": "Maintenance date",
+    "crateDate": "Create date",
+    "updateDate": "Update date",
+    "price": "Price",
     "zona": "Area"
   },
   "Placeholder": {
     "descripcion": "Descripcion...",
+    "serial": "Serial",
+    "estado": "EnEspera",
     "maintenanceDate": "2024-12-02",
+    "crateDate": "2024-12-02",
+    "updateDate": "2024-12-02",
+    "price": "150000",
     "zona": "selected"
   },
   "Buttons": {

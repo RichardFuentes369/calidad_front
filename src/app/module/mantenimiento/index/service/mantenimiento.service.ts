@@ -11,7 +11,7 @@ export class MantenimientoService {
 
   // orden
   async getDataOrden(id: string){
-    let complemento = 'zona/obtener-zona/'
+    let complemento = `orden-mantenimiento/orden/`
     let urlCopleta = environment.apiUrl+complemento+id
 
     return await axios.request({

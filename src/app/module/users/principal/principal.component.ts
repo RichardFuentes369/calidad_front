@@ -88,7 +88,7 @@ export class PrincipalComponent implements OnInit{
     localStorage.setItem('profile', 'admin')
     this.tamano = "xl"
     this.scrollable = false
-    this.title = "Crear administrador"
+    this.title = this.translate.instant('pages-usuarios.Title.CreateAdminWord')
     this.save = true
     this.buttonSave = "Guardar"
     this.edit = false
@@ -108,7 +108,7 @@ export class PrincipalComponent implements OnInit{
   verData (_id: string){
     this.tamano = "xl"
     this.scrollable = false
-    this.title = "Ver administrador"
+    this.title = this.translate.instant('pages-usuarios.Title.SeeAdminWord')
     this.save = false
     this.buttonSave = "Guardar"
     this.edit = false
@@ -131,7 +131,7 @@ export class PrincipalComponent implements OnInit{
   editarData (_id: string){
     this.tamano = "xl"
     this.scrollable = false
-    this.title = "Editar administrador"
+    this.title = this.translate.instant('pages-usuarios.Title.EditAdminWord')
     this.save = false
     this.buttonSave = "Guardar"
     this.edit = false
