@@ -51,4 +51,14 @@ export class ZonaComunService {
     })
   }
 
+  async listZonaSelect(){
+    let complemento = 'zona/zonaSelect/'
+    let urlCopleta = environment.apiUrl+complemento
+
+    return await axios.request({
+      method: 'get',
+      url: urlCopleta,
+    })
+  }
+
 }

@@ -14,6 +14,9 @@ import { CrearMantenimientoComponent } from './mantenimiento/components/crear-ma
 import { EditarMantenimientoComponent } from './mantenimiento/components/editar-mantenimiento/editar-mantenimiento.component';
 import { VerMantenimientoComponent } from './mantenimiento/components/ver-mantenimiento/ver-mantenimiento.component';
 
+import { CrearHistoricoComponent } from './mantenimiento/components/crear-historico/crear-historico.component';
+import { EditarHistoricoComponent } from './mantenimiento/components/editar-historico/editar-historico.component';
+
 
 export class ListaComponentes {
 
@@ -75,6 +78,14 @@ export class ListaComponentes {
     {
       name: 'VerMantenimientoComponent',
       componente: VerMantenimientoComponent
+    },
+    {
+      name: 'CrearHistoricoComponent',
+      componente: CrearHistoricoComponent
+    },
+    {
+      name: 'EditarHistoricoComponent',
+      componente: EditarHistoricoComponent
     }
   ];
 

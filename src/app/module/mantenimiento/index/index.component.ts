@@ -55,8 +55,8 @@ export class IndexComponent {
         data: 'id',
       },
       {
-        title: 'Description',
-        data: 'descripcion',
+        title: 'Area Name',
+        data: 'zona_id.nombre',
       },
       {
         title: 'Description',

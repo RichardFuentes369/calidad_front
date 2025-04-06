@@ -15,5 +15,18 @@
     "TitleRegisterActived": "Registration enabled",
     "TitleActived": "Activate",
     "TitleInactived": "Inactivate"
+  },
+  "Label":{
+    "descripcion": "Descripction",
+    "maintenanceDate": "Maintenance date",
+    "zona": "Area"
+  },
+  "Placeholder": {
+    "descripcion": "Descripcion...",
+    "maintenanceDate": "2024-12-02",
+    "zona": "selected"
+  },
+  "Buttons": {
+    "createOrder": "Create Order"
   }
 }

@@ -21,8 +21,10 @@ export class MantenimientoService {
   }
 
   async createOrden(data: any){
-    let complemento = 'zona/crear-zona/'
+    let complemento = 'orden-mantenimiento'
     let urlCopleta = environment.apiUrl+complemento
+
+    data.zona_id = parseInt(data.zona_id) 
 
     return await axios.request({
       method: 'post',
@@ -34,7 +36,7 @@ export class MantenimientoService {
   async updateOrden(data: any, id: string){
     let complemento = `zona/editar-zona/${id}`
     let urlCopleta = environment.apiUrl+complemento
-
+    
     return await axios.request({
       method: 'patch',
       url: urlCopleta,

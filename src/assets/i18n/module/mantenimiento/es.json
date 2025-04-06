@@ -15,5 +15,18 @@
     "TitleRegisterActived": "Registro activado",
     "TitleActived": "Activar",
     "TitleInactived": "Inactivar"
+  },
+  "Label":{
+    "descripcion": "Descripción",
+    "maintenanceDate": "Fecha mantenimiento",
+    "zona": "Zona"
+  },
+  "Placeholder": {
+    "descripcion": "Descripción...",
+    "maintenanceDate": "2024-12-02",
+    "zona": "Seleccione"
+  },
+  "Buttons": {
+    "createOrder": "Crear orden"
   }
 }
