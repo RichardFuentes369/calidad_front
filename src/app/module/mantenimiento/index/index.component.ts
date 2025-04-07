@@ -195,6 +195,28 @@ export class IndexComponent {
         });
       });
     }
+
+    historicoData (_id: string){
+      this.tamano = "xl"
+      this.scrollable = true
+      this.title = this.translate.instant('pages-mantenimiento.Title.HistoryWord')
+      this.save = false
+      this.buttonSave = "Guardar"
+      this.edit = false
+      this.buttonEdit = "Editar"
+      this.cancel = true
+      this.buttonCancel = "Cancelar"
+      this.componentePrecargado = "HistoricoComponent"
+  
+      const idButton = document.getElementById('miBoton')
+      if(idButton){
+        this.router.navigate([], {
+          queryParams: { id: _id },
+        });
+        idButton.setAttribute('componente', this.componentePrecargado);
+        idButton.click()
+      }
+    }
   
     async refrescarTabla (){
       setTimeout(async () => {

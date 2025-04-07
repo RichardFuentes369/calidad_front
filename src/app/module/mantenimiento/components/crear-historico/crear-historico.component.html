@@ -1,1 +1,51 @@
-<p>crear-historico works!</p>
+<div class="">
+    <div class="col-xl-12 col-sm-12 row">
+        <div class="col-xl col-sm-12">
+            <div class="col-sm-12 row p-0">
+            <div class="col-sm-12 form-group">
+                <label for="exampleInputEmail1">
+                {{ 'pages-mantenimiento.Label.observation' | translate}}
+                </label>
+                <input type="text" class="form-control" id="exampleInputEmail1" value=""
+                aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.observation' | translate}}">
+                <!-- <small id="emailHelp" class="form-text text-muted">{{ 'pages-mantenimiento.Error.Descripcion' | translate}}</small> -->
+            </div>
+            <div class="col-sm-12 form-group">
+                <label for="exampleInputEmail1">
+                {{ 'pages-mantenimiento.Label.price' | translate}}
+                </label>
+                <input type="number" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp"
+                placeholder="{{ 'pages-mantenimiento.Placeholder.price' | translate}}" min="0">
+                <!-- <small id="emailHelp" class="form-text text-muted">{{ 'pages-mantenimiento.Error.price' | translate}}</small> -->
+            </div>  
+            <div class="col-sm-12 form-group">
+                <label for="exampleInputEmail1">
+                {{ 'pages-mantenimiento.Label.recommendation' | translate}}
+                </label>
+                <input type="text" class="form-control" id="exampleInputEmail1" value=""
+                aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.recommendation' | translate}}">
+                <!-- <small id="emailHelp" class="form-text text-muted">{{ 'pages-mantenimiento.Error.Descripcion' | translate}}</small> -->
+            </div>
+            <div class="col-sm-12 form-group">
+                <!-- <label for="exampleInputEmail1">
+                {{ 'pages-mantenimiento.Label.zona' | translate}}
+                </label>
+                <select [(ngModel)]="model.zona_id" class="form-control">
+                @for (zona of zona; track zona.id) {
+                    <option [ngValue]="zona.id">
+                    {{ zona.nombre }} - {{ zona.descripcion }}
+                    </option>
+                }
+                </select> -->
+            </div> 
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 row p-0">
+    <div class="col-sm-12">
+        <!-- <button class="btn btn-sm btn-primary btnAction d-none" (click)="">
+        {{ 'pages-mantenimiento.Buttons.createHistory' | translate}}
+        </button> -->
+    </div>
+    </div>
+</div>

@@ -4,7 +4,8 @@
     "pageMaintenanceTitle":"Mantenimiento",
     "CreateMaintenanceWord":"Crear Manetnimiento",
     "EditMaintenanceWord":"Editar Manetnimiento",
-    "SeeMaintenanceWord":"Ver Manetnimiento"
+    "SeeMaintenanceWord":"Ver Manetnimiento",
+    "HistoryWord":"Historico"
   },
   "Swal": {
     "TitleAreYouSure": "Estas seguro?",
@@ -32,7 +33,9 @@
     "zona": "Zona",
     "nameZone": "Nombre zona",
     "descriptionZone": "Descripcion zona",
-    "locationZone": "Ubicacion zona"
+    "locationZone": "Ubicacion zona",
+    "observation": "Observacion",
+    "recommendation": "Recomendacion"
   },
   "Placeholder": {
     "descripcion": "Descripción...",
@@ -42,10 +45,13 @@
     "crateDate": "2024-12-02",
     "updateDate": "2024-12-02",
     "price": "150000",
-    "zona": "Seleccione"
+    "zona": "Seleccione",
+    "observation": "Observacion...",
+    "recommendation": "Recomendacion..."
   },
   "Buttons": {
     "createOrder": "Crear orden",
-    "updateOrder": "Actualizar orden"
+    "updateOrder": "Actualizar orden",
+    "createHistory": "Crear historico"
   }
 }

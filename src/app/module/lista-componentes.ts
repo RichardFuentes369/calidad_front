@@ -13,10 +13,7 @@ import { EditarProveedorComponent } from './proveedor/components/editar-proveedo
 import { CrearMantenimientoComponent } from './mantenimiento/components/crear-mantenimiento/crear-mantenimiento.component';
 import { EditarMantenimientoComponent } from './mantenimiento/components/editar-mantenimiento/editar-mantenimiento.component';
 import { VerMantenimientoComponent } from './mantenimiento/components/ver-mantenimiento/ver-mantenimiento.component';
-
-import { CrearHistoricoComponent } from './mantenimiento/components/crear-historico/crear-historico.component';
-import { EditarHistoricoComponent } from './mantenimiento/components/editar-historico/editar-historico.component';
-
+import { HistoricoComponent } from './mantenimiento/historico/historico.component';
 
 export class ListaComponentes {
 
@@ -79,14 +76,13 @@ export class ListaComponentes {
       name: 'VerMantenimientoComponent',
       componente: VerMantenimientoComponent
     },
+
+    // historico
     {
-      name: 'CrearHistoricoComponent',
-      componente: CrearHistoricoComponent
+      name: 'HistoricoComponent',
+      componente: HistoricoComponent
     },
-    {
-      name: 'EditarHistoricoComponent',
-      componente: EditarHistoricoComponent
-    }
+    
   ];
 
   obtenerComponentePorNombre(nombre: string) {
