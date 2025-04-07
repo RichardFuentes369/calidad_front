@@ -14,6 +14,24 @@
       </div>
       <div class="col-xl col-sm-12">
         <label for="exampleInputEmail1">
+          {{ 'pages-mantenimiento.Label.nameZone' | translate}}
+        </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{item.zona_id.nombre}}" readonly>
+      </div>
+      <div class="col-xl col-sm-12">
+        <label for="exampleInputEmail1">
+          {{ 'pages-mantenimiento.Label.descriptionZone' | translate}}
+        </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{item.zona_id.descripcion}}" readonly>
+      </div>
+      <div class="col-xl col-sm-12">
+        <label for="exampleInputEmail1">
+          {{ 'pages-mantenimiento.Label.locationZone' | translate}}
+        </label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{item.zona_id.ubicacion}}" readonly>
+      </div>
+      <div class="col-xl col-sm-12">
+        <label for="exampleInputEmail1">
           {{ 'pages-mantenimiento.Label.maintenanceDate' | translate}}
         </label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{item.fecha_mantenimiento}}" readonly>

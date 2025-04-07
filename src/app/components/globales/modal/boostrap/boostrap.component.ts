@@ -48,6 +48,13 @@ export class ModalBoostrapComponent {
       await this.actualizarTabla.emit()
     }
   }
+  async buttonUpdateM(){
+    const boton = document.querySelector('.btnAction') as HTMLButtonElement
+    if(boton){
+      await boton.click()
+      await this.actualizarTabla.emit()
+    }
+  }
 
   @Input()
   tamano: string = '';

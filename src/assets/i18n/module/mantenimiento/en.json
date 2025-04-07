@@ -10,6 +10,7 @@
     "TitleAreYouSure": "Are you sure?",
     "TitleWarningRevert": "You will not be able to revert this change!",
     "TitleCreate": "Created",
+    "TitleUpdate": "Updated",
     "TitleCancel": "Cancel",
     "TitleDelete": "Delete!",
     "TitleRegisterUpdated": "Registration updated",
@@ -28,7 +29,10 @@
     "crateDate": "Create date",
     "updateDate": "Update date",
     "price": "Price",
-    "zona": "Area"
+    "zona": "Area",
+    "nameZone": "Name zone",
+    "descriptionZone": "Description zone",
+    "locationZone": "Location zone"
   },
   "Placeholder": {
     "descripcion": "Descripcion...",
@@ -41,6 +45,7 @@
     "zona": "selected"
   },
   "Buttons": {
-    "createOrder": "Create Order"
+    "createOrder": "Create Order",
+    "updateOrder": "Update Order"
   }
 }

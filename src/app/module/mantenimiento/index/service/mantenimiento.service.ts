@@ -33,14 +33,14 @@ export class MantenimientoService {
     })
   }
 
-  async updateOrden(data: any, id: string){
-    let complemento = `zona/editar-zona/${id}`
+  async updateOrden(data: any){
+    let complemento = `orden-mantenimiento/${data.id}`
     let urlCopleta = environment.apiUrl+complemento
     
     return await axios.request({
       method: 'patch',
       url: urlCopleta,
-      data: data,
+      data: {'estado': data.estado},
     })
   }
 

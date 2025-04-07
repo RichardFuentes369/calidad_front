@@ -149,10 +149,10 @@ export class IndexComponent {
     editarData (_id: string){
       this.tamano = "xl"
       this.scrollable = false
-      this.title = "Editar mantenimietno"
+      this.title = this.translate.instant('pages-mantenimiento.Title.EditMaintenanceWord')
       this.save = false
       this.buttonSave = "Guardar"
-      this.edit = false
+      this.edit = true
       this.buttonEdit = "Editar"
       this.cancel = true
       this.buttonCancel = "Cancelar"

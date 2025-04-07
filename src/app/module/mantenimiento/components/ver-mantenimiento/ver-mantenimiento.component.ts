@@ -15,7 +15,11 @@ interface MantenimientoInterface {
   'fecha_creacion': string,
   'fecha_actualizacion': string,
   'estado': string,
-  'zona': string,
+  'zona_id': {
+    'nombre': string,
+    'descripcion': string,
+    'ubicacion': string
+  },
 }
 
 @Component({

@@ -10,6 +10,7 @@
     "TitleAreYouSure": "Estas seguro?",
     "TitleWarnigRevert": "No podras reviertir este cambio!",
     "TitleCreate": "Creado",
+    "TitleUpdate": "Actualizado",
     "TitleCancel": "Cancelar",
     "TitleDelete": "Eliminar!",
     "TitleRegisterUpdated": "Registro actualizado",
@@ -28,7 +29,10 @@
     "crateDate": "Fecha creación",
     "updateDate": "Fecha actualización",
     "price": "Precio",
-    "zona": "Zona"
+    "zona": "Zona",
+    "nameZone": "Nombre zona",
+    "descriptionZone": "Descripcion zona",
+    "locationZone": "Ubicacion zona"
   },
   "Placeholder": {
     "descripcion": "Descripción...",
@@ -41,6 +45,7 @@
     "zona": "Seleccione"
   },
   "Buttons": {
-    "createOrder": "Crear orden"
+    "createOrder": "Crear orden",
+    "updateOrder": "Actualizar orden"
   }
 }
