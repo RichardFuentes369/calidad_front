@@ -51,4 +51,14 @@ export class ProveedorService {
       url: urlCopleta,
     })
   }
+
+  async listProveedorSelect(){
+    let complemento = 'proveedor/proveedorSelect/'
+    let urlCopleta = environment.apiUrl+complemento
+
+    return await axios.request({
+      method: 'get',
+      url: urlCopleta,
+    })
+  }
 }

@@ -84,6 +84,14 @@ export class HistoricoComponent implements OnInit {
   cierreModal = "true"
   componentePrecargado = ""
 
-    
+
+  @ViewChild(TablecrudComponent)
+  someInput!: TablecrudComponent
+
+  async refrescarTabla (){
+    setTimeout(async () => {
+      await this.someInput.reload()
+    }, 100);
+  }
 }
 

@@ -56,5 +56,18 @@ export class MantenimientoService {
 
 
   // historico
+  async createHistory(data: any){
+    let complemento = `orden-historico/${data.orden_id}`
+    let urlCopleta = environment.apiUrl+complemento
+
+    data.orden_id = parseInt(data.orden_id) 
+    data.proveedor_id = parseInt(data.proveedor_id  ) 
+
+    return await axios.request({
+      method: 'post',
+      url: urlCopleta,
+      data: data,
+    })
+  }
   
 }

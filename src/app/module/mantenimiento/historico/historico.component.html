@@ -1,6 +1,7 @@
 <div class="">
-    <app-crear-historico>
-
+    <app-crear-historico
+      (actualizarTabla)="refrescarTabla()"
+    >
     </app-crear-historico>
 
     <app-globales-tablecrud
@@ -8,6 +9,7 @@
       [endPoint] = endPointReal
       [columnas] = columnas
       [permisosAcciones] = permisos
+      (actualizarTabla)="refrescarTabla()"
     >
     </app-globales-tablecrud>
 </div>
