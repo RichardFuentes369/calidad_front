@@ -48,6 +48,9 @@ export class ModalBoostrapComponent {
       await this.actualizarTabla.emit()
     }
   }
+  async buttonCloseM(){
+    await this.actualizarTabla.emit()
+  }
   async buttonUpdateM(){
     const boton = document.querySelector('.btnAction') as HTMLButtonElement
     if(boton){

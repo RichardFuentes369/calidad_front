@@ -61,11 +61,9 @@ export class CrearHistoricoComponent implements OnInit{
       }
     }
 
-
     @Output()
     actualizarTabla = new EventEmitter<string>()
     async crearHistory(){
-
       this.model.orden_id = this.route.snapshot.queryParams['id']
       await this.mantenimientoService.createHistory(this.model)
       .then(response=>{
@@ -83,7 +81,6 @@ export class CrearHistoricoComponent implements OnInit{
             icon: "success"
           });
         });
-
         this.actualizarTabla.emit()
       }).catch(err =>{
         console.log(err)

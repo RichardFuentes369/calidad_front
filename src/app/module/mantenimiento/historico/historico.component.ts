@@ -84,7 +84,6 @@ export class HistoricoComponent implements OnInit {
   cierreModal = "true"
   componentePrecargado = ""
 
-
   @ViewChild(TablecrudComponent)
   someInput!: TablecrudComponent
 
@@ -92,6 +91,32 @@ export class HistoricoComponent implements OnInit {
     setTimeout(async () => {
       await this.someInput.reload()
     }, 100);
+  }
+
+  eliminarData (_id: string){
+    console.log("eliminarData "+_id)
+    this.translate.get('pages-mantenimiento.Swal.TitleAreYouSure').subscribe((translatedTitle: string) => {
+      Swal.fire({
+        title: translatedTitle,
+        text: this.translate.instant('pages-mantenimiento.Swal.TitleWarnigRevert'),
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: this.translate.instant('pages-mantenimiento.Swal.TitleDelete'),
+        cancelButtonText: this.translate.instant('pages-mantenimiento.Swal.TitleCancel')
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+            if (result.isConfirmed) {
+              await this.mantenimientoService.deleteHistorico(_id)
+              await this.someInput.reload()
+              Swal.fire({
+                title: this.translate.instant('pages-mantenimiento.Swal.TitleDelete'),
+                text: this.translate.instant('pages-mantenimiento.Swal.TitleRegisterDeleted'),
+                icon: "success"
+              });
+            }
+        }
+      });
+    });
   }
 }
 

@@ -69,5 +69,16 @@ export class MantenimientoService {
       data: data,
     })
   }
+
+  async deleteHistorico(id: string){
+    let complemento = 'orden-historico/'
+    let urlCopleta = environment.apiUrl+complemento+id
+
+    return await axios.request({
+      method: 'delete',
+      url: urlCopleta,
+    })
+  }
+
   
 }
