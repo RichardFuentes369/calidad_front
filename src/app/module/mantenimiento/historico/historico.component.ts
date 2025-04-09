@@ -65,8 +65,8 @@ export class HistoricoComponent implements OnInit {
       data: 'precio',
     },
     {
-      title: 'Recommendation',
-      data: 'recomendacion',
+      title: 'Supplier',
+      data: 'proveedor.razonSocial',
     }
   ]
   permisosAcciones = this.permisos
