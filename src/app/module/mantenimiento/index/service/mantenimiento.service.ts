@@ -45,7 +45,7 @@ export class MantenimientoService {
   }
 
   async deleteOrden(id: string){
-    let complemento = 'zona/eliminar-zona/'
+    let complemento = 'orden-mantenimiento/'
     let urlCopleta = environment.apiUrl+complemento+id
 
     return await axios.request({

@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 import { ocultarModalOscura } from '@functions/System'
 import { ZonaComunService } from '@module/zonaComun/index/service/zona-comun.service';
 
+import moment from 'moment-timezone'
+
 
 @Component({
   selector: 'app-crear-mantenimiento',
@@ -29,7 +31,7 @@ export class CrearMantenimientoComponent implements OnInit{
   
     model = {
       descripcion: '',
-      fecha_mantenimiento: '',
+      fecha_mantenimiento: 0,
       zona_id: ''
     }
 
@@ -53,6 +55,11 @@ export class CrearMantenimientoComponent implements OnInit{
     }
   
     async crearOrden(){
+      const colombiaTimeZone = 'America/Bogota';
+      let fechaMomentColombia = moment.tz(this.model.fecha_mantenimiento, colombiaTimeZone);
+      let timestampSegundos = fechaMomentColombia.valueOf() / 1000;
+      this.model.fecha_mantenimiento = timestampSegundos
+
       await this.mantenimientoService.createOrden(this.model)
       .then(response=>{
         ocultarModalOscura()
