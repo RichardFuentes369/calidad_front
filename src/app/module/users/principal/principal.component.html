@@ -1,9 +1,15 @@
 <div class="">
   <h1>{{ 'pages-usuarios.Tipo.AdminWord' | translate}}</h1>
 
+  <app-globales-buscador
+    [icon]="iconFilter" 
+    (buttonClick)="onFloatingButtonClick()"
+  >
+  </app-globales-buscador>
+  
   <app-globales-tablecrud
-    [campoFiltro] = "true"
-    [endPoint] = "'admin'"
+    [campoFiltro] = showcampoFiltro
+    [endPoint] = endPoint
     [columnas] = columnas
     [permisosAcciones] = permisos
 

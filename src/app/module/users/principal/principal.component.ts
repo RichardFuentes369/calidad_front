@@ -14,12 +14,14 @@ import { ModalBoostrapComponent } from '@component/globales/modal/boostrap/boost
 import { LoadingComponent } from '@component/globales/loading/loading.component';
 
 import { PrincipalService } from './service/principal.service';
+import { BuscadorComponent } from '@component/globales/buscador/buscador.component';
 
 @Component({
   selector: 'app-principal',
   standalone: true,
   imports: [
     TranslateModule,
+    BuscadorComponent,
     TablecrudComponent,
     ModalBoostrapComponent,
     LoadingComponent
@@ -47,6 +49,8 @@ export class PrincipalComponent implements OnInit{
   }
 
   // inicio datos que envio al componente tabla
+  showcampoFiltro = false
+  endPoint = 'admin'
   columnas = [
     {
       title: 'ID',
@@ -83,6 +87,8 @@ export class PrincipalComponent implements OnInit{
   buttonCancel = "Cancelar"
   cierreModal = "true"
   componentePrecargado = ""
+
+  iconFilter="fa fa-filter"
 
   crearData (_id: string){
     localStorage.setItem('profile', 'admin')
@@ -226,6 +232,10 @@ export class PrincipalComponent implements OnInit{
         }
       });
     });
+  }
+
+  onFloatingButtonClick(): void {
+    console.log('¡Botón flotante clickeado!');
   }
 
 }

@@ -56,6 +56,7 @@ export class TablecrudComponent implements OnInit {
       scrollY: '400',
       ordering: false,
       processing: true,
+      searching: false,
       serverSide: true, // Set the flag
       ajax: (dataTablesParameters: any, callback) => {
         const page = parseInt(dataTablesParameters.start) / parseInt(dataTablesParameters.length) + 1;

@@ -14,6 +14,7 @@ import { ModalBoostrapComponent } from '@component/globales/modal/boostrap/boost
 import { LoadingComponent } from '@component/globales/loading/loading.component';
 
 import { ProveedorService } from './service/proveedor.service';
+import { BuscadorComponent } from '@component/globales/buscador/buscador.component';
 
 @Component({
   selector: 'app-proveedor-index',
@@ -22,6 +23,7 @@ import { ProveedorService } from './service/proveedor.service';
     CommonModule, 
     PipesModule, 
     TranslateModule,
+    BuscadorComponent,
     TablecrudComponent,
     ModalBoostrapComponent,
     LoadingComponent
@@ -97,6 +99,8 @@ export class IndexComponent implements OnInit{
   buttonCancel = "Cancelar"
   cierreModal = "true"
   componentePrecargado = ""
+
+  iconFilter="fa fa-filter"
 
   crearData (_id: string){
     localStorage.setItem('profile', 'admin')
@@ -196,5 +200,9 @@ export class IndexComponent implements OnInit{
     setTimeout(async () => {
       await this.someInput.reload()
     }, 100);
+  }
+
+  onFloatingButtonClick(): void {
+    console.log('¡Botón flotante clickeado!');
   }
 }

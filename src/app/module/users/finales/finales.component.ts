@@ -12,12 +12,14 @@ import { Permisos } from '@functions/System'
 import { LoadingComponent } from '@component/globales/loading/loading.component';
 import { FinalService } from './service/final.service';
 import { ModalBoostrapComponent } from '@component/globales/modal/boostrap/boostrap.component';
+import { BuscadorComponent } from '@component/globales/buscador/buscador.component';
 
 @Component({
   selector: 'app-menu-usuarios-finales',
   standalone: true,
   imports: [
     TranslateModule,
+    BuscadorComponent,
     TablecrudComponent,
     ModalBoostrapComponent,
     LoadingComponent
@@ -45,7 +47,7 @@ export class FinalesComponent implements OnInit{
   }
 
   // inicio datos que envio al componente
-  showcampoFiltro = true
+  showcampoFiltro = false
   endPoint = 'user'
   columnas = [
     {
@@ -83,6 +85,8 @@ export class FinalesComponent implements OnInit{
   buttonCancel = "Cancelar"
   cierreModal = "true"
   componentePrecargado = ""
+
+  iconFilter="fa fa-filter"
 
   crearData (_id: string){
     localStorage.setItem('profile', 'user')
@@ -221,6 +225,10 @@ export class FinalesComponent implements OnInit{
         }
       });
     });
+  }
+
+  onFloatingButtonClick(): void {
+    console.log('¡Botón flotante clickeado!');
   }
 
 }

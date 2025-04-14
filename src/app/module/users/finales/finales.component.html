@@ -1,7 +1,13 @@
 <div class="">
 
   <h1>{{ 'pages-usuarios.Tipo.FinalWord' | translate}}</h1>
-
+  
+  <app-globales-buscador
+    [icon]="iconFilter" 
+    (buttonClick)="onFloatingButtonClick()"
+  >
+  </app-globales-buscador>
+  
   <app-globales-tablecrud
     [campoFiltro] = showcampoFiltro
     [endPoint] = endPoint

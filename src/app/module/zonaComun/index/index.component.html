@@ -1,6 +1,12 @@
 <div class="">
     <h1>{{ 'pages-zonaComun.Title.Module' | translate}}</h1>
   
+    <app-globales-buscador
+      [icon]="iconFilter" 
+      (buttonClick)="onFloatingButtonClick()"
+    >
+    </app-globales-buscador>
+
     <app-globales-tablecrud
       [campoFiltro] = "true"
       [endPoint] = "'zona'"
