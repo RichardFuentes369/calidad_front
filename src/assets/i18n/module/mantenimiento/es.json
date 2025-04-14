@@ -36,7 +36,8 @@
     "descriptionZone": "Descripcion zona",
     "locationZone": "Ubicacion zona",
     "observation": "Observacion",
-    "recommendation": "Recomendacion"
+    "recommendation": "Recomendacion",
+    "ordernumber": "# Orden"
   },
   "Placeholder": {
     "descripcion": "Descripción...",

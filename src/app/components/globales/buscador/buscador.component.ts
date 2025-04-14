@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input, ViewChild, ViewContainerRef, ComponentFactoryResolver, OnInit, Output, EventEmitter, ElementRef, AfterViewInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+
+import { ListaComponentes } from '@module/lista-componentes'
 
 @Component({
   selector: 'app-globales-buscador',
@@ -12,23 +14,40 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './buscador.component.html',
   styleUrl: './buscador.component.scss'
 })
-export class BuscadorComponent {
+export class BuscadorComponent{
+  @ViewChild('contenedorFilter', { read: ViewContainerRef }) contenedorDinamico!: ViewContainerRef;
+
+  constructor(private resolver: ComponentFactoryResolver) {}
+
+  listaDeComponentes = new ListaComponentes();
 
   @Input()
   icon: string = 'fa fa-filter';  
-  isFilterVisible: string = 'd-none';
+  @Input()
+  componente: string = '';  
+
+  isFilterVisible: boolean = false;
   clickeado:boolean = false
 
-  @Output() buttonClick = new EventEmitter<void>();
-
-  onClick(): void {
-    this.clickeado = !this.clickeado
-    if(this.clickeado == true){
-      this.isFilterVisible = ''
+  async openFilter() {
+    let componente = await this.listaDeComponentes.obtenerComponentePorNombre(this.componente);
+    
+    if(componente){
+      const factory = await this.resolver.resolveComponentFactory(componente.componente);
+      this.contenedorDinamico.clear()
+      this.contenedorDinamico.createComponent(factory);
+      
+      this.clickeado = !this.clickeado
+      console.log(this.clickeado)
+      if(this.clickeado == true){
+        this.isFilterVisible = true
+      }else{
+        this.isFilterVisible = false
+      }
     }else{
-      this.isFilterVisible = 'd-none'
+      console.log('componente no encontrado')
     }
-    this.buttonClick.emit();
+
   }  
 
 }

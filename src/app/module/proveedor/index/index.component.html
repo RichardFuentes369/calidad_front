@@ -3,22 +3,26 @@
 
   <app-globales-buscador
     [icon]="iconFilter" 
-    (buttonClick)="onFloatingButtonClick()"
+    [componente]="componenteFilter"
   >
   </app-globales-buscador>
 
-  <app-globales-tablecrud
-    [campoFiltro] = "true"
-    [endPoint] = "'proveedor'"
-    [columnas] = columnas
-    [permisosAcciones] = permisos
+  <br>
 
-    (verItem) = "verData($event)"
-    (crearNuevoItem) = "crearData($event)"
-    (editarItem) = "editarData($event)"
-    (eliminarItem) = "eliminarData($event)"
-  >
-  </app-globales-tablecrud>
+  <div class="card p-5">
+    <app-globales-tablecrud
+      [campoFiltro] = "true"
+      [endPoint] = "'proveedor'"
+      [columnas] = columnas
+      [permisosAcciones] = permisos
+  
+      (verItem) = "verData($event)"
+      (crearNuevoItem) = "crearData($event)"
+      (editarItem) = "editarData($event)"
+      (eliminarItem) = "eliminarData($event)"
+    >
+    </app-globales-tablecrud>
+  </div>
 
   <app-globales-modal-boostrap
     [tamano]="tamano"

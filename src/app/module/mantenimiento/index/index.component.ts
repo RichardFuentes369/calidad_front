@@ -104,7 +104,10 @@ export class IndexComponent {
   cierreModal = "true"
   componentePrecargado = ""
 
+  search = true
+  buttonSearch = "Buscar"
   iconFilter="fa fa-filter"
+  componenteFilter="FiltroMantenimientoComponent"
 
   crearData (_id: string){
     localStorage.setItem('profile', 'admin')

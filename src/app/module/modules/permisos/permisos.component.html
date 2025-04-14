@@ -1,13 +1,14 @@
 <div class="">
   <h1>{{ 'pages-modulos.Title.Permissions' | translate}}</h1>
-
-  <app-globales-tablecrud
-    [campoFiltro] = showcampoFiltro
-    [endPoint] = endPoint
-    [columnas] = columnas
-    [permisosAcciones] = permisos
-  >
-  </app-globales-tablecrud>
+  <div class="card p-5">
+    <app-globales-tablecrud
+      [campoFiltro] = showcampoFiltro
+      [endPoint] = endPoint
+      [columnas] = columnas
+      [permisosAcciones] = permisos
+    >
+    </app-globales-tablecrud>
+  </div>
 </div>
 
 <!--

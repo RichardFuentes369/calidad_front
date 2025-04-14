@@ -86,7 +86,10 @@ export class FinalesComponent implements OnInit{
   cierreModal = "true"
   componentePrecargado = ""
 
+  search = true
+  buttonSearch = "Buscar"
   iconFilter="fa fa-filter"
+  componenteFilter="FiltroUsuariosComponent"
 
   crearData (_id: string){
     localStorage.setItem('profile', 'user')

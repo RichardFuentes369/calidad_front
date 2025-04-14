@@ -3,23 +3,27 @@
 
     <app-globales-buscador
       [icon]="iconFilter" 
-      (buttonClick)="onFloatingButtonClick()"
+      [componente]="componenteFilter"
     >
     </app-globales-buscador>
-  
-    <app-globales-tablecrud
-      [campoFiltro] = true
-      [endPoint] = "'orden-mantenimiento'"
-      [columnas] = columnas
-      [permisosAcciones] = permisos
-  
-      (verItem) = "verData($event)"
-      (crearNuevoItem) = "crearData($event)"
-      (editarItem) = "editarData($event)"
-      (eliminarItem) = "eliminarData($event)"
-      (historicoItem) = "historicoData($event)"
-    >
-    </app-globales-tablecrud>
+
+    <br>
+    
+    <div class="card p-5">
+      <app-globales-tablecrud
+        [campoFiltro] = true
+        [endPoint] = "'orden-mantenimiento'"
+        [columnas] = columnas
+        [permisosAcciones] = permisos
+    
+        (verItem) = "verData($event)"
+        (crearNuevoItem) = "crearData($event)"
+        (editarItem) = "editarData($event)"
+        (eliminarItem) = "eliminarData($event)"
+        (historicoItem) = "historicoData($event)"
+      >
+      </app-globales-tablecrud>
+    </div>
 
     <app-globales-modal-boostrap
       [tamano]="tamano"

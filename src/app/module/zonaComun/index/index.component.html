@@ -1,12 +1,15 @@
 <div class="">
-    <h1>{{ 'pages-zonaComun.Title.Module' | translate}}</h1>
-  
-    <app-globales-buscador
-      [icon]="iconFilter" 
-      (buttonClick)="onFloatingButtonClick()"
-    >
-    </app-globales-buscador>
+  <h1>{{ 'pages-zonaComun.Title.Module' | translate}}</h1>
 
+  <app-globales-buscador
+    [icon]="iconFilter" 
+    [componente]="componenteFilter"
+  >
+  </app-globales-buscador>
+
+  <br>
+  
+  <div class="card p-5">
     <app-globales-tablecrud
       [campoFiltro] = "true"
       [endPoint] = "'zona'"
@@ -19,22 +22,22 @@
       (eliminarItem) = "eliminarData($event)"
     >
     </app-globales-tablecrud>
-
-    <app-globales-modal-boostrap
-      [tamano]="tamano"
-      [scrollable]="scrollable"
-      [title]="title"
-      [save]="save"
-      [buttonSave]="buttonSave"
-      [edit]="edit"
-      [buttonEdit]="buttonEdit"
-      [cancel]="cancel"
-      [buttonCancel]="buttonCancel"
-      [componentePrecargado]="componentePrecargado"
-      [cierreModal]="cierreModal"
-      (actualizarTabla)="refrescarTabla()"
-    >
-    </app-globales-modal-boostrap>
-
   </div>
-  
+
+  <app-globales-modal-boostrap
+    [tamano]="tamano"
+    [scrollable]="scrollable"
+    [title]="title"
+    [save]="save"
+    [buttonSave]="buttonSave"
+    [edit]="edit"
+    [buttonEdit]="buttonEdit"
+    [cancel]="cancel"
+    [buttonCancel]="buttonCancel"
+    [componentePrecargado]="componentePrecargado"
+    [cierreModal]="cierreModal"
+    (actualizarTabla)="refrescarTabla()"
+  >
+  </app-globales-modal-boostrap>
+
+</div>

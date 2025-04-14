@@ -100,7 +100,10 @@ export class IndexComponent implements OnInit{
   cierreModal = "true"
   componentePrecargado = ""
 
+  search = true
+  buttonSearch = "Buscar"
   iconFilter="fa fa-filter"
+  componenteFilter="FiltroProveedorComponent"
 
   crearData (_id: string){
     localStorage.setItem('profile', 'admin')

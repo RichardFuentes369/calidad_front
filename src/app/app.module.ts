@@ -25,7 +25,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { RouterModule } from '@angular/router';
-import { FiltroComponent } from './module/users/components/filtro/filtro.component';
 
 export function createTranslateLoader(http: HttpClient) {
   const baseTranslateUrl = './assets/i18n';
@@ -64,7 +63,6 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    FiltroComponent,
   ],
   imports: [
     BrowserModule,

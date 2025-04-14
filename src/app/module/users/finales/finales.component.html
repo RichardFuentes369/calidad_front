@@ -4,23 +4,27 @@
   
   <app-globales-buscador
     [icon]="iconFilter" 
-    (buttonClick)="onFloatingButtonClick()"
+    [componente]="componenteFilter"
   >
   </app-globales-buscador>
-  
-  <app-globales-tablecrud
-    [campoFiltro] = showcampoFiltro
-    [endPoint] = endPoint
-    [columnas] = columnas
-    [permisosAcciones] = permisos
 
-    (verItem) = "verData($event)"
-    (crearNuevoItem) = "crearData($event)"
-    (editarItem) = "editarData($event)"
-    (eliminarItem) = "eliminarData($event)"
-    (activarItem) = "activarData($event)"
-  >
-  </app-globales-tablecrud>
+  <br>
+  
+  <div class="card p-5">
+    <app-globales-tablecrud
+      [campoFiltro] = showcampoFiltro
+      [endPoint] = endPoint
+      [columnas] = columnas
+      [permisosAcciones] = permisos
+
+      (verItem) = "verData($event)"
+      (crearNuevoItem) = "crearData($event)"
+      (editarItem) = "editarData($event)"
+      (eliminarItem) = "eliminarData($event)"
+      (activarItem) = "activarData($event)"
+    >
+    </app-globales-tablecrud>
+  </div>
 
   <app-globales-modal-boostrap
     [tamano]="tamano"
