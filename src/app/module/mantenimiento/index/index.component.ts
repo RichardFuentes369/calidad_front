@@ -14,7 +14,7 @@ import { ModalBoostrapComponent } from '@component/globales/modal/boostrap/boost
 import { LoadingComponent } from '@component/globales/loading/loading.component';
 
 import { MantenimientoService } from './service/mantenimiento.service';
-import { BuscadorComponent } from '@component/globales/buscador/buscador.component';
+import { SearchComponent } from '@component/globales/search/search.component';
 
 @Component({
   selector: 'app-mantenimiento-index',
@@ -23,7 +23,7 @@ import { BuscadorComponent } from '@component/globales/buscador/buscador.compone
     CommonModule, 
     PipesModule, 
     TranslateModule,
-    BuscadorComponent,
+    SearchComponent,
     TablecrudComponent,
     ModalBoostrapComponent,
     LoadingComponent
@@ -59,6 +59,10 @@ export class IndexComponent {
     {
       title: 'Area Name',
       data: 'zona_id.nombre',
+    },    
+    {
+      title: 'Area Description',
+      data: 'zona_id.descripcion',
     },
     {
       title: '# Registro',

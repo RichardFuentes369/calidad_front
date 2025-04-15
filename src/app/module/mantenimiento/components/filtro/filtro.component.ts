@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BuscadorComponent } from '@component/globales/buscador/buscador.component';
+import { SearchComponent } from '@component/globales/search/search.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -7,7 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [
     TranslateModule,
-    BuscadorComponent,
+    SearchComponent,
   ],
   templateUrl: './filtro.component.html',
   styleUrl: './filtro.component.scss'

@@ -5,14 +5,12 @@ import { Component, OnInit, Pipe } from '@angular/core';
 import { AuthService } from '@guard/service/auth.service';
 import { PermisosService } from '@service/globales/permisos/permisos.service';
 
-import { BuscadorComponent } from '@component/globales/buscador/buscador.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
   imports: [
-    BuscadorComponent,
     TranslateModule,
     CommonModule
   ],

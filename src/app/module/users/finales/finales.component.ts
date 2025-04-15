@@ -12,14 +12,14 @@ import { Permisos } from '@functions/System'
 import { LoadingComponent } from '@component/globales/loading/loading.component';
 import { FinalService } from './service/final.service';
 import { ModalBoostrapComponent } from '@component/globales/modal/boostrap/boostrap.component';
-import { BuscadorComponent } from '@component/globales/buscador/buscador.component';
+import { SearchComponent } from '@component/globales/search/search.component';
 
 @Component({
   selector: 'app-menu-usuarios-finales',
   standalone: true,
   imports: [
     TranslateModule,
-    BuscadorComponent,
+    SearchComponent,
     TablecrudComponent,
     ModalBoostrapComponent,
     LoadingComponent

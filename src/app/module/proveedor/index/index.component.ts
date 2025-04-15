@@ -14,7 +14,7 @@ import { ModalBoostrapComponent } from '@component/globales/modal/boostrap/boost
 import { LoadingComponent } from '@component/globales/loading/loading.component';
 
 import { ProveedorService } from './service/proveedor.service';
-import { BuscadorComponent } from '@component/globales/buscador/buscador.component';
+import { SearchComponent } from '@component/globales/search/search.component';
 
 @Component({
   selector: 'app-proveedor-index',
@@ -23,7 +23,7 @@ import { BuscadorComponent } from '@component/globales/buscador/buscador.compone
     CommonModule, 
     PipesModule, 
     TranslateModule,
-    BuscadorComponent,
+    SearchComponent,
     TablecrudComponent,
     ModalBoostrapComponent,
     LoadingComponent

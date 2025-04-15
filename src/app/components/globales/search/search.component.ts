@@ -5,16 +5,16 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ListaComponentes } from '@module/lista-componentes'
 
 @Component({
-  selector: 'app-globales-buscador',
+  selector: 'app-globales-search',
   standalone: true,
   imports: [
     CommonModule,
     TranslateModule
   ],
-  templateUrl: './buscador.component.html',
-  styleUrl: './buscador.component.scss'
+  templateUrl: './search.component.html',
+  styleUrl: './search.component.scss'
 })
-export class BuscadorComponent{
+export class SearchComponent{
   @ViewChild('contenedorFilter', { read: ViewContainerRef }) contenedorDinamico!: ViewContainerRef;
 
   constructor(private resolver: ComponentFactoryResolver) {}

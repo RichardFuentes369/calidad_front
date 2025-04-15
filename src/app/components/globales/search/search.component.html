@@ -3,7 +3,8 @@
     <i [ngClass]="icon"></i>
     <div class="popover-content" [ngClass]="{'show': isFilterVisible}" (click)="$event.stopPropagation()">
       <div #contenedorFilter></div>
-      <button (click)="$event.stopPropagation()" class="btn-primary btn btn-sm mt-2">Filtrar</button>
+      <button (click)="$event.stopPropagation()" class="btn-secondary btn btn-sm mt-2">Limpiar</button>
+      <button (click)="$event.stopPropagation()" class="btn-primary btn btn-sm mt-2 mx-sm-2">Filtrar</button>
     </div>
   </button>
 </div>

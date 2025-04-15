@@ -14,14 +14,14 @@ import { ModalBoostrapComponent } from '@component/globales/modal/boostrap/boost
 import { LoadingComponent } from '@component/globales/loading/loading.component';
 
 import { PrincipalService } from './service/principal.service';
-import { BuscadorComponent } from '@component/globales/buscador/buscador.component';
+import { SearchComponent } from '@component/globales/search/search.component';
 
 @Component({
   selector: 'app-principal',
   standalone: true,
   imports: [
     TranslateModule,
-    BuscadorComponent,
+    SearchComponent,
     TablecrudComponent,
     ModalBoostrapComponent,
     LoadingComponent
