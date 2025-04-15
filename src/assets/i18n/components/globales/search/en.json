@@ -1,3 +1,5 @@
 {
-  "WordSearch": "Search"
+  "Title": {
+    "ComponentName": "Search"
+  }
 }
