@@ -6,8 +6,12 @@
         {{ 'global-search.Title.ComponentName' | translate}}
       </h3>
       <div #contenedorFilter></div>
-      <button (click)="$event.stopPropagation()" class="btn-secondary btn btn-sm mt-2">Limpiar</button>
-      <button (click)="$event.stopPropagation()" class="btn-primary btn btn-sm mt-2 mx-sm-2">Filtrar</button>
+      <button (click)="$event.stopPropagation()" class="btn-secondary btn btn-sm mt-2">
+        {{ 'global-search.Buttons.Clear' | translate}}
+      </button>
+      <button (click)="$event.stopPropagation()" class="btn-primary btn btn-sm mt-2 mx-sm-2">
+        {{ 'global-search.Buttons.Filter' | translate}}
+      </button>
     </div>
   </button>
 </div>
