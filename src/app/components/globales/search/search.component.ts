@@ -25,9 +25,12 @@ export class SearchComponent{
   icon: string = 'fa fa-filter';  
   @Input()
   componente: string = '';  
-
+  
   isFilterVisible: boolean = false;
   clickeado:boolean = false
+
+  @Output()
+  filtroItem = new EventEmitter<string>()
 
   async openFilter() {
     let componente = await this.listaDeComponentes.obtenerComponentePorNombre(this.componente);
@@ -38,10 +41,10 @@ export class SearchComponent{
       this.contenedorDinamico.createComponent(factory);
       
       this.clickeado = !this.clickeado
-      console.log(this.clickeado)
       if(this.clickeado == true){
         this.isFilterVisible = true
       }else{
+        this.filtroItem.emit()
         this.isFilterVisible = false
       }
     }else{
@@ -49,5 +52,14 @@ export class SearchComponent{
     }
 
   }  
+
+  async limpiar(){
+    $('.limpiar').click()
+    this.filtroItem.emit()
+  }
+  async filtrar(){
+    $('.filtrar').click()
+    this.filtroItem.emit()
+  }
 
 }

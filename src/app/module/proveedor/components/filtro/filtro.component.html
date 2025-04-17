@@ -1,34 +1,37 @@
 <div class="">
     <div class="col-xl col-sm-12 card">
+        <input type="text" class="d-none complementoRuta" value="">
         <div class="row">
             <div class="col-sm-3">
                 <label for="exampleInputEmail1">
                     {{ 'pages-proveedor.Label.name' | translate}}
                 </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp" placeholder="{{ 'pages-proveedor.Placeholder.name' | translate}}">
-                <small id="emailHelp" class="form-text text-muted">{{ 'pages-proveedor.Error.name' | translate}}</small>
+                <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="model.razonSocial" aria-describedby="emailHelp" placeholder="{{ 'pages-proveedor.Placeholder.name' | translate}}">
+                <small id="emailHelp" class="form-text text-muted">{{ 'pages-proveedor.Error.razonSocial' | translate}}</small>
             </div>
             <div class="col-sm-3">
                 <label for="exampleInputEmail1">
                     {{ 'pages-proveedor.Label.nit' | translate}}
                 </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp" placeholder="{{ 'pages-proveedor.Placeholder.nit' | translate}}">
+                <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="model.nit" aria-describedby="emailHelp" placeholder="{{ 'pages-proveedor.Placeholder.nit' | translate}}">
                 <small id="emailHelp" class="form-text text-muted">{{ 'pages-proveedor.Error.nit' | translate}}</small>
             </div>            
             <div class="col-sm-3">
                 <label for="exampleInputEmail1">
                     {{ 'pages-proveedor.Label.email' | translate}}
                 </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp" placeholder="{{ 'pages-proveedor.Placeholder.email' | translate}}">
+                <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="model.email" aria-describedby="emailHelp" placeholder="{{ 'pages-proveedor.Placeholder.email' | translate}}">
                 <small id="emailHelp" class="form-text text-muted">{{ 'pages-proveedor.Error.email' | translate}}</small>
             </div>
             <div class="col-sm-3">
                 <label for="exampleInputEmail1">
                     {{ 'pages-proveedor.Label.status' | translate}}
                 </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp" placeholder="{{ 'pages-proveedor.Placeholder.status' | translate}}">
+                <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="model.estado" aria-describedby="emailHelp" placeholder="{{ 'pages-proveedor.Placeholder.status' | translate}}">
                 <small id="emailHelp" class="form-text text-muted">{{ 'pages-proveedor.Error.status' | translate}}</small>
             </div>
         </div>
+        <button class="d-none limpiar" (click)="limpiar()"></button>
+        <button class="d-none filtrar" (click)="filtrar()"></button>
     </div>
 </div>

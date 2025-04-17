@@ -51,6 +51,13 @@
     "observation": "Observacion...",
     "recommendation": "Recomendacion..."
   },
+  "Error": {
+    "zona": "",
+    "ordernumber": "",
+    "maintenanceDate": "",
+    "estado": "",
+    "crateDate": ""
+  },
   "Buttons": {
     "createOrder": "Create Order",
     "updateOrder": "Update Order",

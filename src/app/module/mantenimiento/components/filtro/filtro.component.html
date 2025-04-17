@@ -1,18 +1,19 @@
 <div class="">
     <div class="col-xl col-sm-12 card">
         <div class="row">
+            <input type="text" class="d-none complementoRuta" value="">
             <div class="col-sm-3">
                 <label for="exampleInputEmail1">
                     {{ 'pages-mantenimiento.Label.zona' | translate}}
                 </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.zona' | translate}}">
+                <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="model.zona_id" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.zona' | translate}}">
                 <small id="emailHelp" class="form-text text-muted">{{ 'pages-mantenimiento.Error.zona' | translate}}</small>
             </div>
             <div class="col-sm-3">
                 <label for="exampleInputEmail1">
                     {{ 'pages-mantenimiento.Label.ordernumber' | translate}}
                 </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.email' | translate}}">
+                <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="model.serial" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.email' | translate}}">
                 <small id="emailHelp" class="form-text text-muted">{{ 'pages-mantenimiento.Error.ordernumber' | translate}}</small>
             </div>
             <div class="col-sm-6 row">
@@ -20,11 +21,11 @@
                     {{ 'pages-mantenimiento.Label.maintenanceDate' | translate}}
                 </label>
                 <div class="col-sm-6">
-                    <input type="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.maintenanceDate' | translate}}">
+                    <input type="date" class="form-control" id="exampleInputEmail1" [(ngModel)]="model.fecha_mantenimiento_inicio" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.maintenanceDate' | translate}}">
                     <small id="emailHelp" class="form-text text-muted">{{ 'pages-mantenimiento.Error.maintenanceDate' | translate}}</small>
                 </div>
                 <div class="col-sm-6">
-                    <input type="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.maintenanceDate' | translate}}">
+                    <input type="date" class="form-control" id="exampleInputEmail1" [(ngModel)]="model.fecha_mantenimiento_fin" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.maintenanceDate' | translate}}">
                     <small id="emailHelp" class="form-text text-muted">{{ 'pages-mantenimiento.Error.maintenanceDate' | translate}}</small>
                 </div>
             </div>
@@ -32,16 +33,18 @@
                 <label for="exampleInputEmail1">
                     {{ 'pages-mantenimiento.Label.estado' | translate}}
                 </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.estado' | translate}}">
+                <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="model.estado" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.estado' | translate}}">
                 <small id="emailHelp" class="form-text text-muted">{{ 'pages-mantenimiento.Error.estado' | translate}}</small>
             </div>
             <div class="col-sm-6">
                 <label for="exampleInputEmail1">
                     {{ 'pages-mantenimiento.Label.crateDate' | translate}}
                 </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.crateDate' | translate}}">
+                <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="model.fecha_creacion" aria-describedby="emailHelp" placeholder="{{ 'pages-mantenimiento.Placeholder.crateDate' | translate}}">
                 <small id="emailHelp" class="form-text text-muted">{{ 'pages-mantenimiento.Error.crateDate' | translate}}</small>
             </div>
+            <button class="d-none limpiar" (click)="limpiar()"></button>
+            <button class="d-none filtrar" (click)="filtrar()"></button>
         </div>
     </div>
 </div>

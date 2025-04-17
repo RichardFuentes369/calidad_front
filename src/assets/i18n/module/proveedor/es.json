@@ -34,5 +34,11 @@
         "TitleRegisterActived": "Registro activado",
         "TitleActived": "Activar",
         "TitleInactived": "Inactivar"
+    },
+    "Error": {
+        "razonSocial": "",
+        "nit": "",
+        "email": "",
+        "status": ""
     }
 }

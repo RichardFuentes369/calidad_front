@@ -49,6 +49,7 @@ export class FinalesComponent implements OnInit{
   // inicio datos que envio al componente
   showcampoFiltro = false
   endPoint = 'user'
+  filters = ''
   columnas = [
     {
       title: 'ID',
@@ -230,8 +231,14 @@ export class FinalesComponent implements OnInit{
     });
   }
 
-  onFloatingButtonClick(): void {
-    console.log('¡Botón flotante clickeado!');
+  async filtroData(){
+    let filtros = await $('.complementoRuta').val();
+    if(typeof filtros === 'string'){
+      this.filters = filtros
+    }else{
+      this.filters = ''
+    }
   }
+
 
 }

@@ -51,6 +51,9 @@ export class IndexComponent implements OnInit{
   }
 
   // inicio datos que envio al componente tabla
+  showcampoFiltro = false
+  endPoint = 'proveedor'
+  filters = ''
   columnas = [
     {
       title: 'ID',
@@ -205,7 +208,13 @@ export class IndexComponent implements OnInit{
     }, 100);
   }
 
-  onFloatingButtonClick(): void {
-    console.log('¡Botón flotante clickeado!');
+  async filtroData(){
+    let filtros = await $('.complementoRuta').val();
+    if(typeof filtros === 'string'){
+      this.filters = filtros
+    }else{
+      this.filters = ''
+    }
   }
+
 }

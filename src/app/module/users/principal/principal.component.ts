@@ -51,6 +51,7 @@ export class PrincipalComponent implements OnInit{
   // inicio datos que envio al componente tabla
   showcampoFiltro = false
   endPoint = 'admin'
+  filters = ''
   columnas = [
     {
       title: 'ID',
@@ -235,6 +236,15 @@ export class PrincipalComponent implements OnInit{
         }
       });
     });
+  }
+
+  async filtroData(){
+    let filtros = await $('.complementoRuta').val();
+    if(typeof filtros === 'string'){
+      this.filters = filtros
+    }else{
+      this.filters = ''
+    }
   }
 
 }

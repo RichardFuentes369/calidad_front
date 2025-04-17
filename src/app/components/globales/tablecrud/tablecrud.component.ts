@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 
 import { Config } from 'datatables.net';
 
@@ -26,6 +26,8 @@ export class TablecrudComponent implements OnInit {
   @Input()
   endPoint: string = '';
   @Input()
+  filters: string = '';
+  @Input()
   columnas: any;
   @Input()
   permisosAcciones: any[] = [];
@@ -45,12 +47,17 @@ export class TablecrudComponent implements OnInit {
     this.listar();
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    this.datatableElement.dtInstance.then((dtInstance: any) => {
+      dtInstance.ajax.reload();
+    });
+  }
+
   tienePermiso(nombre: string): boolean {
     return this.permisosAcciones.some((permiso) => permiso.permiso_nombre_permiso === nombre);
   }
 
   listar() {
-
     this.dtOptions = {
       paging: true,
       scrollY: '400',
@@ -67,7 +74,7 @@ export class TablecrudComponent implements OnInit {
         // dataTablesParameters.sortOrder = dataTablesParameters.order[0].dir;
 
         this.http.get<any[]>(
-            `${this.url}${this.endPoint}?page=${page}&limit=${dataTablesParameters.length}&field=id&order=asc`
+            `${this.url}${this.endPoint}?page=${page}&limit=${dataTablesParameters.length}&field=id&order=asc${this.filters}`
         ).subscribe((post) => {
           const recordsTotal = post[0].pagination.totalRecord;
           const recordsFiltered = post.length;

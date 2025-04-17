@@ -28,5 +28,9 @@
         "TitleRegisterActived": "You register actived",
         "TitleActived": "Actived",
         "TitleInactived": "Inactived"
+    },
+    "Error": {
+        "name": "",
+        "description": ""
     }
 }

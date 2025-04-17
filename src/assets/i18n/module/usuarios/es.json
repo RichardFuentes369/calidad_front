@@ -29,7 +29,7 @@
     "lastName": "Lozano Fonseca",
     "email": "email@example.es",
     "password": "********",
-    "select": "Seleccione porfavor",
+    "select": "Seleccione por favor",
     "isActive": "Activo",
     "isInactive": "Inactivo"
   },
