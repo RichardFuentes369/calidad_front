@@ -43,7 +43,7 @@ export class CrearProveedorComponent {
 
   async crearProveedor(){
 
-    this.model.estado = (this.model.estado === 'true') ? 'activo':'inactivo' 
+    this.model.estado = (this.model.estado == "true") ? 'Activo':'Inactivo' 
 
     await this.proveedorService.createSupplier(this.model)
     .then(response=>{

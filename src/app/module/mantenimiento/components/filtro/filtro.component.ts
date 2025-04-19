@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ZonaComunService } from '@module/zonaComun/index/service/zona-comun.service';
 import { TranslateModule } from '@ngx-translate/core';
+import moment from 'moment-timezone';
 
 @Component({
   selector: 'app-filtro',
@@ -9,7 +11,13 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './filtro.component.html',
   styleUrl: './filtro.component.scss'
 })
-export class FiltroMantenimientoComponent {
+export class FiltroMantenimientoComponent implements OnInit{
+  
+  constructor(
+    private zonaComunService :ZonaComunService,
+  ){ }
+
+  zona: any [] = []
 
   complementoFiltro = ''
 
@@ -22,6 +30,13 @@ export class FiltroMantenimientoComponent {
     fecha_creacion: '',
     estado: '',
     zona_id: '',
+  }
+
+  async ngOnInit() {
+    const zonaList = await this.zonaComunService.listZonaSelect();
+    if (zonaList && Array.isArray(zonaList.data)) {
+      this.zona = zonaList.data
+    }
   }
 
   limpiar(){
@@ -38,9 +53,10 @@ export class FiltroMantenimientoComponent {
   }
 
   dateToTimestamp(dateString: string) {
-    const date = new Date(dateString);
-    const timestampMilliseconds = date.getTime();
-    return Math.floor(timestampMilliseconds / 1000);
+    const date = moment(dateString, 'YYYY-MM-DD');
+    const colombiaDate = date.tz('America/Bogota');
+    const formattedDate = colombiaDate.unix();
+    return formattedDate;
   }
   
   filtrar(){
@@ -63,7 +79,7 @@ export class FiltroMantenimientoComponent {
       this.complementoFiltro += `&fecha_mantenimiento_fin=${fecha_mantenimiento_fin}`      
     }    
     if(this.model.fecha_creacion != ''){
-      let fecha_creacion = this.model.fecha_creacion
+      let fecha_creacion = this.dateToTimestamp(this.model.fecha_creacion)
       this.complementoFiltro += `&fecha_creacion=${fecha_creacion}`      
     }   
     if(this.model.estado != ''){

@@ -38,7 +38,8 @@ export class FiltroProveedorComponent {
       this.complementoFiltro += `&razonSocial=${this.model.razonSocial}`
     }
     if(this.model.estado != ''){
-      this.complementoFiltro += `&estado=${this.model.estado}`
+      let opcion = (this.model.estado == "true") ? 'Activo':'Inactivo'
+      this.complementoFiltro += `&estado=${opcion}`
     }
     if(this.model.nit != ''){
       this.complementoFiltro += `&nit=${this.model.nit}`

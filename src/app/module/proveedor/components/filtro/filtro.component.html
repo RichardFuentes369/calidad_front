@@ -27,8 +27,15 @@
                 <label for="exampleInputEmail1">
                     {{ 'pages-proveedor.Label.status' | translate}}
                 </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="model.estado" aria-describedby="emailHelp" placeholder="{{ 'pages-proveedor.Placeholder.status' | translate}}">
-                <small id="emailHelp" class="form-text text-muted">{{ 'pages-proveedor.Error.status' | translate}}</small>
+                <select [(ngModel)]="model.estado" class="form-control">
+                    <option value="">Seleccione</option>
+                    <option [ngValue]="'true'">
+                        {{ 'pages-proveedor.Placeholder.isActive' | translate}}
+                    </option>
+                    <option [ngValue]="'false'">
+                        {{ 'pages-proveedor.Placeholder.isInactive' | translate}}
+                    </option>
+                </select>
             </div>
         </div>
         <button class="d-none limpiar" (click)="limpiar()"></button>

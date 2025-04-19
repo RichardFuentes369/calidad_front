@@ -28,10 +28,11 @@
             {{ 'pages-proveedor.Label.status' | translate}}
           </label>
           <select [(ngModel)]="model.estado" class="form-control">
-            <option [ngValue]="true">
+            <option value="">Seleccione</option>
+            <option [ngValue]="'true'">
               {{ 'pages-proveedor.Placeholder.isActive' | translate}}
             </option>
-            <option [ngValue]="false">
+            <option [ngValue]="'false'">
               {{ 'pages-proveedor.Placeholder.isInactive' | translate}}
             </option>
           </select>
